@@ -64,11 +64,11 @@
           alias cp='cp -i'
           alias mv='mv -i'
 
-    - name: 배포 - pingtest.sh (연결 테스트 스크립트)
-      copy:
-        src: "{{ playbook_dir }}/../Script/pingtest.sh"
-        dest: /usr/local/bin/pingtest.sh
-        mode: '0755'
+    # - name: 배포 - pingtest.sh (연결 테스트 스크립트)
+    #   copy:
+    #     src: "{{ playbook_dir }}/../Script/pingtest.sh"
+    #     dest: /usr/local/bin/pingtest.sh
+    #     mode: '0755'
 
 
 # ═══════════════════════════════════════════════════════════════════════════
