@@ -63,13 +63,7 @@
           alias rm='rm -i'
           alias cp='cp -i'
           alias mv='mv -i'
-
-    # - name: 배포 - pingtest.sh (연결 테스트 스크립트)
-    #   copy:
-    #     src: "{{ playbook_dir }}/../Script/pingtest.sh"
-    #     dest: /usr/local/bin/pingtest.sh
-    #     mode: '0755'
-
+          alias c='clear'
 
 # ═══════════════════════════════════════════════════════════════════════════
 # [추가 설정] GUI 및 데스크탑 환경 조성 (Chrome, VSCode, Antigravity, Shortcuts)
