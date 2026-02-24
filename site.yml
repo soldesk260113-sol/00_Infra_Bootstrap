@@ -6,3 +6,4 @@
 - import_playbook: 00_bootstrap_ansible_user.yml
 - import_playbook: 00_network_provisioning.yml
 - import_playbook: 01_common_setup.yml
+- import_playbook: 02_install_terraform.yml

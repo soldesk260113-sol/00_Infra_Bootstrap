@@ -11,6 +11,7 @@
     name: firewalld
     state: started
     enabled: yes
+  when: inventory_hostname not in firewalld_excluded_nodes
 
 - name: 2. 방화벽(firewalld) 필요한 포트 열기
   firewalld:
@@ -21,6 +22,7 @@
   with_items:
     - ssh
     - https
+  when: inventory_hostname not in firewalld_excluded_nodes
 
 - name: 3. 방화벽에서 ICMP (ping) 허용
   firewalld:
@@ -28,9 +30,11 @@
     permanent: true
     immediate: true
     state: enabled
+  when: inventory_hostname not in firewalld_excluded_nodes
 
 - name: 4. 방화벽 재시작
   command: firewall-cmd --reload
+  when: inventory_hostname not in firewalld_excluded_nodes
 
 # 2. Basic Configuration (Hosts, Utils)
 - name: 5. 모든 서버에 /etc/hosts 매핑 (Ansible Inventory 기준)

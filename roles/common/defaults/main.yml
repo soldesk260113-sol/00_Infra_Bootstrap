@@ -1,0 +1,10 @@
+---
+# roles/common/defaults/main.yml
+
+# Nodes where firewalld should NOT be enabled/configured by this role
+# These are handled separately or use iptables-services (e.g. DB Proxy)
+firewalld_excluded_nodes:
+  - DB-Active
+  - DB-Standby
+  - DB-Proxy1
+  - DB-Proxy2
